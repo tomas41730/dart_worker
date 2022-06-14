@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package tp5;
+
+service RegisterSlavesHandler 
+{
+  rpc RegisterSlave(Registry) returns (RegistryResponse) {}
+}
+
+message Registry 
+{
+  string ip = 1;
+  string name = 2;
+}
+
+message RegistryResponse 
+{
+  string res = 1;
+}
